@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "vue.vscode-typescript-vue-plugin",
+        "vue.volar",
+        "esbenp.prettier-vscode",
+        "qwtel.sqlite-viewer",
+        "zixuanchen.vitest-explorer",
+        "golang.go",
+        "dbaeumer.vscode-eslint"
+    ]
+}
