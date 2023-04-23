@@ -21,6 +21,7 @@ const isDisplayTable = computed(() => dt.value.length > 0);
 
 onMounted(async () => {
     const todos = await service.value.GetTodos();
+
     if (todos) {
         dt.value = todos.data;
         countUpButton.value.$el.focus();
@@ -54,13 +55,14 @@ export default defineComponent({
                 paginator
                 :rows="5"
                 :rowsPerPageOptions="[5, 10, 20, 50]"
-                tableStyle="min-width: 50rem"
             >
                 <column :field="'userId'" :header="'userId'" />
                 <column :field="'id'" :header="'id'" />
                 <column :field="'title'" :header="'title'" />
                 <column :field="'completed'" :header="'completed'" />
             </data-table>
+
+            <div data-testid="data-table">Hello</div>
         </div>
     </div>
 </template>
